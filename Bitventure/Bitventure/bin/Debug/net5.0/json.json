@@ -1,0 +1,54 @@
+{
+  "services": [
+    {
+      "baseURL": "http://swapi.dev/api",
+      "enabled": true,
+      "endpoints": [
+        {
+          "enabled": true,
+          "resource": "/people/1",
+          "response": [
+            {
+              "element": "name",
+              "regex": "Luke Skywalker"
+            },
+            {
+              "element": "height",
+              "regex": "\\d"
+            }
+          ]
+        },
+        {
+          "enabled": true,
+          "resource": "/films/1",
+          "response": [
+            {
+              "element": "title",
+              "regex": "A New Hope"
+            },
+            {
+              "element": "director",
+              "identifier": "Rick McCallum"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "baseURL": "https://api.funtranslations.com/translate/",
+      "enabled": true,
+      "endpoints": [
+        {
+          "enabled": true,
+          "resource": "groot.json?text=Rocket%20hold%20still.",
+          "response": [
+            {
+              "element": "translation",
+              "identifier": "groot"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
